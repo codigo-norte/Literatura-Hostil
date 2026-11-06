@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+#sobre.ativa {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    background-color: #684e41;
+    padding: 50px 40px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.conteudo-sobre {
+    width: 60%;
+    text-align: justify;
+}
+
+.conteudo-sobre h2 {
+    font-family: var(--fonte-h2);
+    color: var(--preto);
+    margin: 0 0 20px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.conteudo-sobre p {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    color: var(--preto);
+    max-width: 650px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+
+
+.inscricao-clube {
+    width: 35%;
+    top: 100px;
+    position: static;
+}
+
+.inscricao-clube h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0 0 12px;
+    color: var(--preto);
+}
+
+.inscricao-clube p {
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+}
+
+.formulario input {
+    width: 318px;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid var(--contorno);
+    border-radius: 4px 0 0 4px;
+}
+
+.formulario button {
+    width: 80px;
+    height: 30px;
+    padding: 2 28px;
+    border: 1px solid var(--contorno);
+    border-radius: 0 4px 4px 0;
+    background-color: #b7562f;
+    color: #f8f5f4;
+    font-family: 'Times New Roman', serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.icones-sobre {
+    position: absolute;
+    right: -10px;
+    bottom: -60px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    z-index: 2;
+}
+.icones-sobre img {
+    width: 400px;
+    height: auto;
+}
+
+.imagem-principal {
+    width: 600px;
+    height: auto;
+}
+
+/*Rodapé*/
+
+footer {
+    background-color: #1a1513;
+    color: #f1e6dc;
+    padding: 50px 60px 20px;
+}
+
+body.perfil-ativo footer {
+    display: none;
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-clube {
+    width: 45%;
+}
+
+.footer-clube h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.footer-clube p {
+    font-family: 'Monotype Corsiva';
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 350px;
+    margin: 0;
+}
+
+.footer-navegacao,
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-navegacao h4,
+.footer-redes h4 {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+.footer-navegacao a,
+.footer-redes a {
+    color: #f1e6dc;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 15px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-navegacao a:hover,
+.footer-redes a:hover {
+    opacity: 0.65;
+}
+
+.footer-final {
+    border-top: 1px solid #806c60;
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.footer-final p {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 13px;
+}

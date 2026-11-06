@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Clube de Leitura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Marcellus&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/livros.css">
+    <link rel="stylesheet" href="css/publicacoes.css">
+    <link rel="stylesheet" href="css/artigos.css">
+    <link rel="stylesheet" href="css/sobre-rodape.css">
+</head>
+<body>
+
+<!-- Menu Superior Fixo (Fora das abas para estar sempre visível) -->
+<nav class="top-nav">
+    <button class="nav-item ativo" data-aba="livros">
+        <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span>Livros</span>
+    </button>
+    <button class="nav-item" data-aba="publicacoes">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span>Feed</span>
+    </button>
+    <button class="nav-item" data-aba="artigos">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <span>Artigos</span>
+    </button>
+    <button class="nav-item" data-aba="sobre">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>Sobre</span>
+    </button>
+    <button class="nav-item" data-aba="perfil">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Perfil</span>
+    </button>
+</nav>
+
+<main>
+    <!-- ABA 1: LIVROS (Com a Capa Principal + Livro do Mês + Leituras) -->
+    <section id="livros" class="aba-conteudo ativa">
+        <header>
+            <div class="conteudo-home">
+                <p class="subtitulo-clube">Clube de Leitura</p>
+                <h1>Sussurro das Páginas</h1>
+                <p class="texto-home">O lugar onde as mentes agitadas podem compartilhar seus pensamentos</p>
+                <p class="home-rede-social">@clube_sussurro_das_paginas</p>
+                <img class="icone-livro" src="imagens/animacao-livros-empilhados.svg" alt="Animação de três livros empilhados um sobre o outro">
+            </div>
+            <div class="home-convite">
+                <img class="icone-mao-livro" src="imagens/icone-mao-livro.png" alt="">
+                <p class="home-citacao">Leituras compartilhadas,<br> conversas que ficam.</p>
+                <p class="home-chamada">Venha fazer parte da comunidade</p>
+                <a class="home-botao" href="#">Conheça o Clube</a>
+            </div>
+        </header>   
+
+        <div id="livro-mes">
+            <h2>Livro do Mês</h2>
+            <div class="conteudo-livro">
+                <div class="capa-livro">
+                    <img id="livro-mes-capa" src="imagens/livro-divinos-rivais.jpg" alt="Capa do livro Divinos Rivais da Rebecca Ross">
+                </div>
+
+                <div class="avaliacao">
+                    <button type="button" aria-label="1 estrela">★</button>
+                    <button type="button" aria-label="2 estrelas">★</button>
+                    <button type="button" aria-label="3 estrelas">★</button>
+                    <button type="button" aria-label="4 estrelas">★</button>
+                    <button type="button" aria-label="5 estrelas">★</button>
+                </div>
+                <div class="informacao-livro">
+                    <div class="organizar-data">
+                        <h3 id="livro-mes-titulo">Divinos Rivais</h3>
+                        <time id="livro-mes-data" datetime="2026-08-15">15/08/2026</time>
+                    </div>
+                    <p id="livro-mes-autor" class="autor-livro">-Rebecca Ross-</p>
+                    <p id="livro-mes-resenha">É um livro que cheira a tinta, papel e guerra.
+                    Enquanto o mundo desaba lá fora, dois corações aprendem a se encontrar no silêncio entre uma linha e outra.<br> As cartas viram refúgio.<br> Viram casa.<br>
+                    Num tempo onde deuses sangram e cidades caem, a coisa mais perigosa é escrever a verdade... e a coisa mais bonita é ser lido por alguém.<br> É sobre como a palavra pode ser arma, consolo e ponte.
+                    É doce, é triste, é esperança no meio do caos. Pequeno, intenso e fica com você depois que acaba...</p>
+                    <a href="#">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="leituras-clube">
+            <h2>Leituras do Clube</h2>
+            <div class="topo-leituras">    
+                <div class="filtros">
+                    <button type="button" class="recentes">Recentes</button>
+                    <button type="button" class="antigas">Mais Antigas</button>
+                </div>
+                <button type="button" class="botao-ver-tudo">Ver Tudo</button>
+            </div>
+            <div class="conteiner-card">
+                <article class="card-livro">
+                    <img src="imagens/livro-nunca-minta.jpg" alt="Capa do livro Nunca Minta da escritora Freida McFadden">
+                    <div class="info-livro">
+                        <h3>Nunca Minta</h3>
+                        <p>Freida McFadden</p>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </article>
+                <article class="card-livro">
+                    <img src="imagens/livro-a-ultima-carta.jpg" alt="Capa do livro de romance A Última Carta da escritora Rebecca Yarros">
+                    <div class="info-livro"> 
+                        <h3>A Última Carta</h3>
+                        <p>Rebecca Yarros</p>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </article>
+                <article class="card-livro">
+                    <img src="imagens/livro-a-curva-do-sonho.jpg" alt="Capa do livro de ficção científica, A Curva do Sonho da escritora Ursula K. Le Guin">
+                    <div class="info-livro">
+                        <h3>A Curva do Sonho</h3>
+                        <p>Ursula K. Le Guin</p>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </article>
+                <article class="card-livro">
+                    <img src="imagens/livro-o-conde-de-monte-cristo.jpg" alt="Capa do livro O Conde de Monte Cristo do escritor Alexandre Dumas">
+                    <div class="info-livro">
+                        <h3>O Conde de Monte Cristo</h3>
+                        <p>Alexandre Dumas</p>
+                        <a href="#">Saiba mais →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABA 2: PUBLICAÇÕES (FEED) -->
+    <section id="publicacoes" class="aba-conteudo">
+        <h2>Publicações</h2>
+
+        <div class="abas-publicacoes">
+            <button class="aba ativa">Para Você</button>
+            <button class="aba">Reações</button>
+        </div>
+
+        <form class="criar-publicacao" id="form-nova-publicacao">
+            <p>Escreva um comentário</p>
+            <textarea id="texto-publicacao" placeholder="O que você está lendo ou pensando hoje?" style="width: 100%; border: none; background: transparent; outline: none; resize: none; font-family: 'Times New Roman', serif; font-size: 16px; margin: 10px 0;"></textarea>
+            <div class="acoes-publicacao">
+                <input type="file" id="midia-publicacao" accept="image/*,video/*" style="display: none;">
+                <button type="button" class="btn-camera" onclick="document.getElementById('midia-publicacao').click()">📷</button>
+                <button type="button" class="btn-imagem" onclick="document.getElementById('midia-publicacao').click()">🖼️</button>
+                <button type="submit" class="btn-publicar">Publicar</button>
+            </div>
+        </form>
+
+        <div class="lista-publicacoes" id="lista-publicacoes">
+            <article class="publicacao">
+                <img src="imagens/ultima-carta-comentarios.jfif" alt="Foto da capa do livro A Última Carta">
+                <div class="conteudo-publicacao">
+                    <div class="autor-publicacao">
+                        <img src="imagens/clarice-lispector-por-jose-castello-scaled-1.jpg" alt="Foto de perfil da usuária Clarice Lispector">
+                        <span>Clarice Lispector</span>
+                    </div>
+                    <p class="texto-publicacao">Acabei de terminar esse livro e não tenho palavras pra dizer o quanto a história dele me marcou.</p>
+                    <div class="interacoes-publicacao">
+                        <button class="btn-curtir">♡ 30 curtidas</button>
+                        <button class="btn-comentar">💬 70 comentários</button>
+                        <button class="btn-compartilhar">↪ 10 compartilhar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publicacao">
+                <img src="imagens/nunca-minta-comentarios.jpg" alt="Foto da capa do livro em epub Nunca Minta">
+                <div class="conteudo-publicacao">
+                    <div class="autor-publicacao">
+                        <img src="imagens/machado_de_assis_real.jpg" alt="Foto de perfil do usuário Machado de Assis">
+                        <span>Machado de Assis</span>
+                    </div>
+                    <p class="texto-publicacao">Comecei esse livro há dois dias e estou simplesmente amando! Ansiosa para o final.😍</p>
+                    <div class="interacoes-publicacao">
+                        <button class="btn-curtir">♡ 30 curtidas</button>
+                        <button class="btn-comentar">💬 70 comentários</button>
+                        <button class="btn-compartilhar">↪ 10 compartilhar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="publicacao">
+                <img src="imagens/conde-monte-cristo-comentarios.jpg" alt="Foto da capa do livro Conde Monte Cristo">
+                <div class="conteudo-publicacao">
+                    <div class="autor-publicacao">
+                        <img src="imagens/jose-de-alencar.jpg" alt="Foto de perfil do usuário José de Alencar">
+                        <span>José de Alencar</span>
+                    </div>
+                    <p class="texto-publicacao">Mais uma leitura concluída. Um clássico maravilhoso, recomendo muito.</p>
+                    <div class="interacoes-publicacao">
+                        <button class="btn-curtir">♡ 30 curtidas</button>
+                        <button class="btn-comentar">💬 70 comentários</button>
+                        <button class="btn-compartilhar">↪ 10 compartilhar</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <a href="#" class="botao-publicacoes">Ver mais publicações →</a>
+    </section>
+
+    <!-- ABA 3: ARTIGOS -->
+    <section id="artigos" class="aba-conteudo">
+        <h2>Artigos</h2>
+        <p>Descubra novas histórias, conheça diferentes perspectivas e mergulhe em resenhas feitas por quem ama ler.</p>
+
+        <div class="pesquisa-botao">
+            <div class="barra-pesquisa">
+                <svg class="icone-pesquisa" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                </svg>
+                <input type="text" placeholder="Pesquisar Artigos...">
+                <svg class="icone-filtro" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6h16"></path>
+                    <path d="M7 12h10"></path>
+                    <path d="M10 18h4"></path>
+                </svg>
+                <button class="limpar-pesquisa" type="button" aria-label="Limpar pesquisa">×</button>
+            </div>
+            <a href="#" class="botao-ver-artigo">Ver Tudo</a>
+        </div>
+
+        <div class="conteiner-artigos">
+            <article class="card-artigo">
+                <img src="imagens/livro-o-canto-dos-corvos.jpg" alt="Foto capa do livro O Encanto dos Corvos">
+                <div class="info-artigo">
+                    <h3>Encanto dos Corvos</h3>
+                    <p>Margaret Rogerson</p>
+                    <a href="#">Saiba mais →</a>
+                </div>
+            </article>
+        
+            <article class="card-artigo">
+                <img src="imagens/suicidas.jpg" alt="Foto da capa do livro Suicidas">
+                <div class="info-artigo">
+                    <h3>Suicidas</h3>
+                    <p>Rafael Montes</p>
+                    <a href="#">Saiba mais →</a>
+                </div>
+            </article>
+
+            <article class="card-artigo">
+                <img src="imagens/uma-farsa-de-amor-na-espanha.jpg" alt="Foto da capa do livro Uma Farsa de Amor na Espanha">
+                <div class="info-artigo">
+                    <h3>Uma Farsa de Amor na Espanha</h3>
+                    <p>Elena Armas</p>
+                    <a href="#">Saiba mais →</a>
+                </div>
+            </article>
+
+            <article class="card-artigo">
+                <img src="imagens/razao-sensibilidade.jfif" alt="Capa do livro Razão e Sensibilidade">
+                <div class="info-artigo">
+                    <h3>Razão & Sensibilidade</h3>
+                    <p>Jane Austen</p>
+                    <a href="#">Saiba mais →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ABA 4: SOBRE -->
+    <section id="sobre" class="aba-conteudo">
+        <div class="conteudo-sobre">
+            <h2>Sobre o Clube</h2>
+            <p>O clube nasceu da vontade de reunir pessoas diferentes, com gostos, histórias e personalidades diversas, para compartilhar algo em comum: o prazer de ler e conversar. Mais do que falar sobre livros, queremos criar um espaço para conversar, ouvir e ser ouvido.</p>
+            <p>Queremos que este seja um espaço leve, gentil e acolhedor, onde diferentes opiniões possam coexistir com respeito. Um lugar para compartilhar experiências, descobrir novas perspectivas e conversar sobre histórias sem medo de julgamentos. Não há espaço para racismo, preconceito, violência ou discursos de ódio.</p>
+            <p>No fim, o que queremos é simples: que mais pessoas possam encontrar na leitura não uma cobrança, mas uma companhia. Porque não importa quantas páginas você lê, quantos livros termina ou quanto tempo leva para chegar à última página. O importante é ter um lugar onde você possa simplesmente ser você — e, talvez, descobrir uma nova história para viver.</p>
+        </div>
+        <div class="inscricao-clube">
+            <h3>Receba Novidades do Clube</h3>
+            <p>INSCREVA-SE NO NOSSO BLOG E FIQUE POR DENTRO DAS LEITURAS, ENCONTROS E NOVIDADES.</p>
+            <div class="formulario">
+                <input type="email" placeholder="seu-email@gmail.com">
+                <button type="submit">Inscreva-se</button>
+            </div>
+            <div class="icones-sobre">
+                <img class="imagem-principal" src="icones/icone-livros-pena.svg" alt="Ícone ilustrativo de livros e pena">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABA 5: PERFIL (Dedicada ao utilizador) -->
+    <section id="perfil" class="aba-conteudo">
+        <div style="padding: 80px 20px; text-align: center; min-height: 60vh;">
+            <h2>Meu Perfil</h2>
+            <p>Faça login para fazer publicações, enviar resenhas e interagir com o clube.</p>
+            <button id="btn-login-google" style="padding: 10px 20px; background-color: var(--botao-2); color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 20px;">Entrar no Clube</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-conteudo">
+        <div class="footer-clube">
+            <h3>Sussurro das Páginas</h3>
+            <p>“O clube de leitura daqueles que sonham, que imaginam e que vivem mil vidas”</p>
+        </div>
+
+        <div class="footer-navegacao">
+            <h4>Navegação</h4>
+            <a href="#livros">Livros</a>
+            <a href="#publicacoes">Publicações</a>
+            <a href="#artigos">Artigos</a>
+            <a href="#sobre">Sobre</a>
+        </div>
+
+        <div class="footer-redes">
+            <h4>Siga o Clube</h4>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">TikTok</a>
+            <a href="mailto:email@exemplo.com">E-mail</a>
+        </div>
+    </div>
+
+    <div class="footer-final">
+        <p>© 2026 Sussurro das Páginas. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
